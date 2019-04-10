@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_play_control_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bar_bottom_bg">
+
+    <ImageView
+        android:id="@+id/iv_music_list_tab"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_list_tab_music"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_video_list_tab"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_list_tab_video"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_photo_list_tab"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_list_tab_photo"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_favorite_list_tab"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_list_tab_favorite"/>
+
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_line_bottom_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_folder_list_tab"
+        style="@style/MusicBottomBarStyle"
+        android:src="@drawable/selector_list_tab_folder"/>
+
+</LinearLayout>

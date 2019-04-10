@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <com.semisky.multimedia.media_video.videoplayer.VideoSurfaceView
+        android:id="@+id/videoSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/iv_transition_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/include_layout_bottombar"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30px"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_curTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_curTime_text"
+            android:textColor="@android:color/white"
+            android:textSize="20px"/>
+
+        <SeekBar
+            android:id="@+id/sb_video"
+            android:layout_width="615px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25px"
+            android:layout_marginRight="25px"
+            android:layout_toRightOf="@id/tv_curTime"
+            android:max="0"
+            android:maxHeight="10px"
+            android:minHeight="10px"
+            android:progressDrawable="@drawable/sb_style_layer_list"
+            android:thumb="@drawable/sb_circle_thumb_bg"/>
+
+        <TextView
+            android:id="@+id/tv_totalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/sb_video"
+            android:text="@string/tv_totalTime_text"
+            android:textColor="@android:color/white"
+            android:textSize="20px"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include_layout_bottombar"
+        layout="@layout/include_video_play_control_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_alignParentBottom="true"/>
+
+    <include
+        android:id="@+id/include_driving_video_warning_view"
+        layout="@layout/include_driving_video_warning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

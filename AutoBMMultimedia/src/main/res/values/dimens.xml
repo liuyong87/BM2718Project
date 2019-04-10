@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. [Naming rules : ui_id + attr] -->
+
+    <!--music-->
+    <dimen name="rl_song_info_paddingTop">70px</dimen>
+    <!--<dimen name="rl_song_info_layout_height">500px</dimen>-->
+    <dimen name="iv_album_photo_layout_marginLeft">100px</dimen>
+    <dimen name="tv_position_layout_marginRight">100px</dimen>
+    <dimen name="tv_position_drawablePadding">35px</dimen>
+    <dimen name="tv_songName_drawablePadding">35px</dimen>
+    <dimen name="tv_songName_layout_marginLeft">122px</dimen>
+    <dimen name="tv_artistName_drawablePadding">45px</dimen>
+    <dimen name="tv_artistName_layout_marginLeft">122px</dimen>
+    <dimen name="tv_artistName_layout_marginTop">78px</dimen>
+    <dimen name="tv_artistName_layout_marginBottom">23px</dimen>
+    <dimen name="tv_albumName_layout_marginLeft">122px</dimen>
+    <dimen name="tv_albumName_drawablePadding">35px</dimen>
+    <dimen name="tv_favorite_layout_marginRight">100px</dimen>
+    <dimen name="ll_sb_layout_marginTop">70px</dimen>
+
+    <!--video-->
+    <!--photo-->
+    <!--list-->
+    <dimen name="alert_text_size">36px</dimen>
+
+
+</resources>

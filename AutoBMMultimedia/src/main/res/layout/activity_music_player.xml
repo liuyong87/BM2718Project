@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.semisky.multimedia.media_music.view.MusicPlayerActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_song_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingTop="@dimen/rl_song_info_paddingTop">
+
+        <ImageView
+            android:id="@+id/iv_album_photo"
+            android:layout_width="263px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/iv_album_photo_layout_marginLeft"
+            android:src="@drawable/music_album_photo_def"/>
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/tv_position_layout_marginRight"
+            android:drawablePadding="@dimen/tv_position_drawablePadding"
+            android:gravity="center_vertical"
+            android:text="@string/tv_position_text"
+            android:textSize="20px"
+            android:textColor="@android:color/white"
+            />
+
+        <com.semisky.multimedia.common.base_view.MarqueeTextView
+            android:id="@+id/tv_songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_position"
+            android:layout_marginLeft="@dimen/tv_songName_layout_marginLeft"
+            android:layout_toRightOf="@id/iv_album_photo"
+            android:drawableLeft="@drawable/music_name_icon"
+            android:drawablePadding="@dimen/tv_songName_drawablePadding"
+            android:gravity="center_vertical"
+            android:text="@string/tv_songName_text"
+            android:textSize="40px"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingRight="35px"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tv_artistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_songName"
+            android:layout_marginBottom="@dimen/tv_artistName_layout_marginBottom"
+            android:layout_marginLeft="@dimen/tv_artistName_layout_marginLeft"
+            android:layout_marginTop="@dimen/tv_artistName_layout_marginTop"
+            android:layout_toRightOf="@id/iv_album_photo"
+            android:drawableLeft="@drawable/music_artist_icon"
+            android:drawablePadding="@dimen/tv_artistName_drawablePadding"
+            android:gravity="center_vertical"
+            android:text="@string/tv_artistName_text"
+            android:textSize="28px"
+            android:ellipsize="end"
+            android:paddingRight="35px"
+            android:singleLine="true"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tv_albumName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_artistName"
+            android:layout_marginLeft="@dimen/tv_albumName_layout_marginLeft"
+            android:layout_toRightOf="@id/iv_album_photo"
+            android:drawableLeft="@drawable/music_album_icon"
+            android:drawablePadding="@dimen/tv_albumName_drawablePadding"
+            android:gravity="center_vertical"
+            android:text="@string/tv_albumName_text"
+            android:textSize="28px"
+            android:ellipsize="end"
+            android:paddingRight="35px"
+            android:singleLine="true"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_albumName"
+            android:layout_marginRight="@dimen/tv_favorite_layout_marginRight"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:src="@drawable/selector_music_favorite_ic"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/include_bottombar"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30px"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_curTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_curTime_text"
+            android:textColor="@android:color/white"
+            android:textSize="20px"
+            android:layout_centerVertical="true"/>
+
+        <SeekBar
+            android:id="@+id/sb_music"
+            android:layout_width="615px"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_curTime"
+            android:maxHeight="10px"
+            android:minHeight="10px"
+            android:max="0"
+            android:thumb="@drawable/sb_circle_thumb_bg"
+            android:layout_marginLeft="25px"
+            android:layout_marginRight="25px"
+            android:progressDrawable="@drawable/sb_style_layer_list"/>
+
+        <TextView
+            android:id="@+id/tv_totalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/sb_music"
+            android:text="@string/tv_totalTime_text"
+            android:textColor="@android:color/white"
+            android:textSize="20px"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+    <!-- include Bottom Bar-->
+    <include
+        android:id="@+id/include_bottombar"
+        layout="@layout/include_music_play_control_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

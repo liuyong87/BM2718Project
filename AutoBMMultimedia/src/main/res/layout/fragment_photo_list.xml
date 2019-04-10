@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollAlwaysVisible="true"
+        android:horizontalSpacing="2px"
+        android:numColumns="5"
+        android:paddingBottom="30px"
+        android:paddingLeft="13px"
+        android:paddingRight="21px"
+        android:paddingTop="20px"
+        android:scrollbarStyle="insideInset"
+        android:verticalSpacing="20px"/>
+
+    <TextView
+        android:id="@+id/tv_alert_list_empty"
+        style="@style/MediaListEmptyAlertTextStyle"
+        android:text="@string/tv_alert_photo_list_empty_text"/>
+</RelativeLayout>
